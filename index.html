@@ -101,16 +101,16 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-         var blueCanvas = document.getElementById('myBlueCanvas');
-         var blueContext = blueCanvas.getContext("2d");
+         var blueCanvas = document.getElementById('myBlueCanvas');//retrieves second canvas element from HTML
+         var blueContext = blueCanvas.getContext("2d");//retrives 2D rendering context of "blueCanvas", which is needed for drawing
    
-         var imgData = context.getImageData(0, 0, 600, 500); 
+         var imgData = context.getImageData(0, 0, 600, 500);//extract image data from original image
          for(var i = 0; i < imgData.data.length; i += 4) {
-             imgData.data[i] = 0; 
-             imgData.data[i + 1] = 0;
+             imgData.data[i] = 0; // set red to 0
+             imgData.data[i + 1] = 0;// set green to 0
          
-         blueCanvas.width = blueCanvas.width;
-         blueContext.putImageData(imgData, 0, 0);
+         blueCanvas.width = blueCanvas.width;// resets "blueCanvas" width
+         blueContext.putImageData(imgData, 0, 0);// puts modified image data onto "blueCanvas"
 
         }
 
