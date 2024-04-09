@@ -153,12 +153,13 @@
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
-        
-       var blueCanvas = document.getElementById('myBlueCanvas');
-       var blueContext = blueCanvas.getContext("2d");
-       blueContext.font = '20pt Calibri';
-       blueContext.fillStyle = "black";
-       blueContext.fillText("Blue image will go here", 10, 20);
+       
+       // below sets up the second canvas and displays the text for "Blue image will go here"
+       var blueCanvas = document.getElementById('myBlueCanvas'); //Retrieves second canvas element from HTML
+       var blueContext = blueCanvas.getContext("2d"); //Retrieves 2D rendering context of “blueCanvas”
+       blueContext.font = '20pt Calibri'; // sets font of text
+       blueContext.fillStyle = "black"; //makes text the color black
+       blueContext.fillText("Blue image will go here", 10, 20); // Draws text "Blue image will go here" on second canvas at (10, 20)
 
        
       </script>
